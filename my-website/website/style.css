@@ -1,105 +1,136 @@
-/* * {
+* {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
 }
 
-.header {
-  min-height: 100vh;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  background-color: black;
+body {
+  background-color: #181818;
+  color: #fff;
 }
 
 nav {
   display: flex;
-  padding: 2% 5%;
+  padding: 20px 50px;
   justify-content: space-between;
   align-items: center;
-  background: #989898;
-  box-sizing: border-box;
+  background: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-nav img {
-  width: 65px;
-  border-radius: 50%;
-  height: 60px;
-}
-
-.nav-bar {
-  flex: 1;
-  text-align: right;
-}
-
-.nav-bar ul li {
+nav .nav-bar {
+  display: flex;
   list-style: none;
-  display: inline-block;
-  padding: 8px 12px;
+  gap: 25px;
+}
+
+nav .nav-bar li {
   position: relative;
 }
 
-.nav-bar ul li a {
-  color: black;
+nav img {
+  width: 55px;
+  border-radius: 50%;
+  height: 40px;
+} 
+
+nav a {
+  color: #ffffff;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 13px;
+  transition: color 0.3s ease;
 }
 
-.nav-bar ul li::after {
+nav a:hover {
+  color: #f44336;
+}
+
+nav .nav-bar li::after {
   content: "";
-  width: 0%;
+  width: 0;
   height: 2px;
   background: #f44336;
-  display: block;
-  margin: auto;
-  transition: 0.5s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
 }
 
-.nav-bar ul li:hover::after {
+nav .nav-bar li:hover::after {
   width: 100%;
 }
 
-#hello {
-  background-color: #000000;
-}
-
-button {
-  border-radius: 4px;
-  width: 80px;
+/* laman to ng index/home page */
+.text-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+  color: #fff;
+  height: 100vh;
+  padding: 40px;
+  gap: 50px;
 }
 
 .text-box {
-  width: 90%;
-  font-size: 35px;
-  color: #ffffff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -60%);
-  border: 5px solid white;
-  padding: 50px;
-}
-.text-box h1 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  width: 80%;
+  padding: 30px;
+  line-height: 1.6;
+  margin-bottom: 100px;
 }
 
-.text-box p {
+.text-body h1 {
   font-size: 18px;
+  color: #00BCE3;
+  font-weight: 700;
+}
+
+.text-body h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.text-body span {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #00ffff;
+}
+
+.text-body p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #dcdcdc;
+}
+
+button {
+  background-color: #005363;
   color: white;
-  margin: 30px 0;XZZ
-}
-
-.haler-button {
-  padding: 10px;
-  border-radius: 10px;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
   cursor: pointer;
-  font-size: 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.img-div {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-/* .web {
+.img-div img {
+  width: 65vh;
+  border-radius: 10px;
+  box-shadow: 10px;
+  height: 65vh;
+}
+/* end ng index/home page */
+
+/* simula ng about page */
+.web {
   width: 80%;
   margin: 0 auto;
   padding-top: 100px;
@@ -122,7 +153,7 @@ p {
 
 .web-column {
   flex-basis: 30%;
-  background: #989898;
+  background: #404040;
   border-radius: 10px;
   margin-bottom: 5%;
   padding: 20px 12px;
@@ -131,133 +162,18 @@ p {
 
 h3 {
   font-weight: 600;
-  color: white;
+  color: #ffffff;
   margin: 10px 0;
 }
 
 .web-column {
   box-shadow: 10px 10px;
-} */
-
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat", sans-serif;
-  box-sizing: border-box;
 }
-
-body {
-  background-color: #000;
-  color: #fff;
-}
-
-nav {
-  display: flex;
-  padding: 20px 50px;
-  justify-content: space-between;
-  align-items: center;
-  background: #333; /* Darker background for nav */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow for depth */
-}
-
-nav .nav-bar {
-  display: flex;
-  list-style: none;
-  gap: 20px; /* Increased gap for better spacing */
-}
-
-nav .nav-bar li {
-  position: relative;
-}
-
-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #f44336; /* Changes link color on hover */
-}
-
-nav .nav-bar li::after {
-  content: "";
-  width: 0;
-  height: 2px;
-  background: #f44336;
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  transition: width 0.3s ease;
-}
-
-nav .nav-bar li:hover::after {
-  width: 100%;
-}
-
-.text-body {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #000;
-  color: #fff;
-  height: 100vh;
-  padding: 40px;
-  gap: 50px;
-}
-
-.text-box {
-  width: 80%;
-  padding: 20px;
-  line-height: 1.6;
-}
-
-.text-body h1 {
-  font-size: 48px;
-  color: #00ffff;
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.text-body h3 {
-  font-size: 40px;
-  margin-bottom: 20px;
-}
-
-.text-body span {
-  font-size: 40px;
-  margin-bottom: 20px;
-  color: #00ffff;
-}
-
-.text-body p {
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: #dcdcdc;
-}
-
-button {
-  background-color: #f44336;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
+/* end ng about page sa ngayon */
 
 .img-div {
-  width: 45%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.img-div img {
-  width: 80vh;
+  width: 65vh;
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-  height: 80vh;
+  box-shadow: 10px;
+  height: 65vh;
 }
