@@ -17,6 +17,8 @@ nav {
   align-items: center;
   background: #333;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
 }
 
 nav .nav-bar {
@@ -46,6 +48,7 @@ nav a:hover {
   color: #f44336;
 }
 
+/* underline */
 nav .nav-bar li::after {
   content: "";
   width: 0;
@@ -118,9 +121,10 @@ button {
 .haler-button {
   position: relative;
   margin: 0;
-  position: absolute;
-  top: 85%;
-  transform: translateX(300px);
+  /* position: absolute; */
+  /* top: 85%; */
+  /* transform: translateX(300px); */
+  align-items: center;
 }
 
 .img-div {
@@ -179,9 +183,21 @@ h3 {
 }
 /* end ng about page sa ngayon */
 
-.img-div {
-  width: 65vh;
-  border-radius: 10px;
-  box-shadow: 10px;
-  height: 65vh;
+.gallery-div img {
+  width: 75%;
+  border-radius: 50px;
+  height: 100%;
+  padding: 40px;
+}
+
+.gallery-column {
+    float: left;
+    width: 20%;
+    padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
